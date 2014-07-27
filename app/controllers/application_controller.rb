@@ -13,7 +13,11 @@ class ApplicationController < ActionController::Base
         c_register: ["Register", "/register", false],
         d_contact: ["Contact Us", "/contact", false]
       }
-      default_tabs[current.to_sym][2] = true
+      begin
+        default_tabs[current.to_sym][2] = true 
+      rescue Exception => e
+        # nothing
+      end
       default_tabs
     end
 end

@@ -13,7 +13,7 @@
   <div id="menu">
     <ul>
       <% 
-        @current ||= :a_home
+        @current ||= :nothing
         tabs(@current).sort.each do |k, v|
        %>
        <li<%= " class=current_page_item" if v[2] %>><a href="<%= v[1] %>"><%= v[0] %></a></li>
@@ -41,7 +41,7 @@
       <ul>
         <li>
           <div id="search" >
-          <form method="get" action="results.jsp">
+          <form method="get" action="/results">
             <div>
               <input type="text" name="q" id="search-text" value="" />
               <input type="submit" id="search-submit" value="Search" />

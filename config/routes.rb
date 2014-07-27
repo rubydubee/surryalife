@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
   root 'home#index'
-  get 'index' => 'home#index'
-  get 'services' => 'home#services'
-  get 'register' => 'home#register'
-  get 'contact' => 'home#contact'
-  post 'thanks' => 'home#thanks'
+  get ':action' => 'home#:action'
+  post ':action' => 'home#:action'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

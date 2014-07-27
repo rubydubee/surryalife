@@ -1,4 +1,17 @@
 class HomeController < ApplicationController
+  RESULT_MAP = {
+    home: ["Home", "/"],
+    advertising: ["Advertising and Marketing solutions", "/advertising"],
+    brand: ["Brand name and Slogans", "/brand_slogans"],
+    ad_agency: ["Ad agency and sell your product quickly", "/contact?service=Ad+agency+and+sell+your+product+quickly"]
+  }
+  INDEX_MAP = Hash.new { |hash, key| hash[key] = Set.new }
+  
+  "surrya life surryalife consultant".downcase.split.each { |str| INDEX_MAP[str] << RESULT_MAP[:home] }
+  "Latest Advertising and Marketing concepts and solutions".downcase.split.map { |str| INDEX_MAP[str] << RESULT_MAP[:advertising] }
+  "Help to create new brand name and Slogans for your product".downcase.split.map { |str| INDEX_MAP[str] << RESULT_MAP[:brand] }
+  "Ad agency and sell your product quickly".downcase.split.map { |str| INDEX_MAP[str] << RESULT_MAP[:ad_agency] }
+
   def index
     @current = :a_home
   end
@@ -25,4 +38,15 @@ class HomeController < ApplicationController
       @success = false
     end
   end
+
+  def results
+    keywords = params[:q].downcase.split
+    @resultset = keywords.map { |str| INDEX_MAP[str].to_a }.first
+    puts "------------ #{@resultset}"
+  end
+
+  def method_missing(method, params)
+    # handle itself!
+  end
+
 end

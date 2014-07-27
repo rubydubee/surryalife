@@ -1,0 +1,16 @@
+<div class="post">
+  <h2 class="title">Search results : </h2>
+  <div style="clear: both;">&nbsp;</div>
+  <div class="entry">
+    <% if @resultset.blank? %>
+      <p>No results found. Please try another query or check out our <a href="/services">Services</a>.</p>
+    <% else %>
+      <ul>
+      <% @resultset.each do |result| %>
+        <li><a href="<%= result[1] %>"><%= result[0] %></a></li>
+      <% end %>
+      </ul>
+    <% end %>
+    
+  </div>
+</div>
