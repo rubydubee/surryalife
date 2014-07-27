@@ -39,6 +39,17 @@ class HomeController < ApplicationController
     end
   end
 
+  def signup
+    if Rails.env.development? or verify_recaptcha
+      UserMailer.register_mail(params).deliver
+      @success = true
+      @method = "register"
+    else
+      @success = false
+    end
+    render :thanks
+  end
+
   def results
     keywords = params[:q].downcase.split
     @resultset = keywords.map { |str| INDEX_MAP[str].to_a }.first

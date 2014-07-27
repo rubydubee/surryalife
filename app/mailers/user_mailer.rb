@@ -5,4 +5,9 @@ class UserMailer < ActionMailer::Base
     @params = params
     mail(to: "don.paddy@gmail.com", subject: "Contact request from #{@params[:name]}")
   end
+
+  def register_mail(params)
+    @params = params
+    mail(to: "don.paddy@gmail.com", subject: "New User Registration: #{@params[:name]}")
+  end
 end
