@@ -41,7 +41,7 @@ Rails.application.configure do
     :port => 587,
     :domain => "surryalife.com",
     :user_name => ENV["SENDGRID_USERNAME"],
-    :password => ENV["SENDGRID_PASSWORD]",
+    :password => ENV["SENDGRID_PASSWORD"],
     :authentication => :plain,
     :enable_starttls_auto => true
   }
