@@ -1,0 +1,9 @@
+<div class="post">
+  <% if @success %>
+  <h2 class="title">Thank you for <%= @method %>ing</h2><br />
+  <h2 class="title">We will get in touch with you very soon.</h2>
+  <% else %>
+  <h2 class="title">There was some problem with Registration</h2><br />
+  <h2 class="title">Please try again. <a href="/register">Register</a></h2>
+  <% end %>
+</div>

@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Map.Entry"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="com.surrya.Result"%>
+<%@page import="java.util.HashMap"%>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Surrya Life</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+
+<%
+HashMap<String, Result> siteMap = new HashMap<String, Result>();
+siteMap.put("surrya life surryalife consultant", new Result("Home","index.html"));
+//siteMap.put("herbal projects", new Result("Herbal projects","contact.jsp?service=Herbal+products"));
+//siteMap.put("pharmaceutical projects", new Result("Pharmaceutical projects","contact.jsp?service=Pharmaceutical+products"));
+//siteMap.put("Agro based projects", new Result("Agro based projects","contact.jsp?service=Agro+based+projects"));
+//siteMap.put("Mineral water", new Result("Mineral water","contact.jsp?service=Mineral+water"));
+//siteMap.put("Food processing", new Result("Food processing","contact.jsp?service=Food+processing"));
+//siteMap.put("Coal briquettes", new Result("Coal briquettes","contact.jsp?service=Coal+briquettes"));
+//siteMap.put("Mini paper plant", new Result("Mini paper plant","contact.jsp?service=Mini+paper+plant"));
+//siteMap.put("Mini fertilizer plant", new Result("Mini fertilizer plant","contact.jsp?service=Mini+fertilizer+plant"));
+//siteMap.put("new projects all surryalife", new Result("Project Consultant","projects.html"));
+siteMap.put("Latest Advertising and Marketing concepts and solutions", new Result("Advertising and Marketing solutions","advertising.html"));
+siteMap.put("Help to create new brand name and Slogans for your product", new Result("Brand name and Slogans","brand_slogans.html"));
+//siteMap.put("Patent and Trademark registration", new Result("Patent and Trademark registration","patent_reg.html"));
+siteMap.put("Ad agency and sell your product quickly", new Result("Ad agency and sell your product quickly","contact.jsp?service=Ad+agency+and+sell+your+product+quickly"));
+
+%>
+
+<div id="wrapper">
+	<div id="menu">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li class="current_page_item"><a href="services.jsp">Services</a></li>
+			<li><a href="register.html">Register</a></li>
+			<li><a href="contact.jsp">Contact Us</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="header">
+		<div id="logo">
+			<h1><a href="#"><i>life</i></a></h1>
+			<p>RIGHT CONSULTANT FOR YOU!</p>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="page">
+	<div id="page-bgtop">
+	<div id="page-bgbtm">
+		<div id="content">
+			<div class="post">
+			
+			<% 
+				String q = request.getParameter("q");
+				ArrayList<Result> results = new ArrayList<Result>();
+				if(q != null && q.length() > 0) {
+					Iterator<Entry<String, Result>> itr = siteMap.entrySet().iterator();
+					boolean add = false;
+					while(itr.hasNext()) {
+						String[] qs = q.split(" ");
+						add = false;
+						Entry<String, Result> entry = itr.next();
+						for(String qone : qs) {
+							if(entry.getKey().toLowerCase().contains(qone)) {
+								add = true;
+							}
+						}
+						if(add) {
+							results.add(entry.getValue());
+						}
+					}
+				}
+			%>
+			
+				<h2 class="title">Search results : </h2>
+				<div style="clear: both;">&nbsp;</div>
+				<div class="entry">
+					<% if(results.isEmpty()) { %>
+						<p>No results found. Please try another query or check out our <a href="services.jsp">Services</a>.</p>
+					<% } else { %>
+						<ul>
+						<% for(Result r : results) { %>
+							<li><a href="<%= r.url %>"><%= r.title %></a></li>
+						<% } %>
+						</ul>
+					<% } %>
+					
+				</div>
+			</div>
+			
+		<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content -->
+		<div id="sidebar">
+			<ul>
+				<li>
+					<div id="search" >
+					<form method="get" action="results.jsp">
+						<div>
+							<input type="text" name="q" id="search-text" value="" />
+							<input type="submit" id="search-submit" value="Search" />
+						</div>
+					</form>
+					</div>
+					<div style="clear: both;">&nbsp;</div>
+				</li>
+				
+				<li>
+					<h2>Best of Surrya Life</h2>
+					<ul>
+						<li><a href="advertising.html">Latest Advertising and Marketing concepts and solutions</a></li>
+						<!-- li><a href="projects.html">New projects</a></li -->
+						<li><a href="contact.jsp?service=New+Business+Opportunities">New Business Opportunities</a></li>
+						<li><a href="contact.jsp?service=New+Brand+name+and+Slogans">Brand name and Slogans</a></li>
+						<li><a href="contact.jsp?service=Ad+agency+and+sell+your+product+quickly">Ad agency and sell your product quickly</a></li>
+						<!-- li><a href="contact.jsp?service=Patent+and+Trademark+registration">Patent and Trademark Registration</a></li -->
+					</ul>
+				</li>
+				
+				
+			</ul>
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	</div>
+	</div>
+	<!-- end #page -->
+</div>
+	<div id="footer">
+		<p>Copyright (c) 2008 SurryaLife.com. All rights reserved. Design by <a target=_blank href="http://www.10idiots.com">10idiots.com</a> .</p>
+		<p><a href="terms.html">Read our Legal Notice, Terms and Conditions</a></p>
+	</div>
+	<!-- end #footer -->
+</body>
+</html>

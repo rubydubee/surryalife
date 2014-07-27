@@ -1,0 +1,49 @@
+<div class="post">
+  <h2 class="title"><a href="#">Contact us</a></h2>
+  <div style="clear: both;">&nbsp;</div>
+  <div class="entry">
+
+  <p>Have a query 
+  <%= "about #{@service}" if @service %>?
+   Send us right now and we will get in touch with you soon.</p>
+    <form action="/thanks" method="post">
+      <table width="560px" border=0 cellspacing=10>
+        
+        <% if @service %>
+        <tr valign=top>
+          <td width="250px">Service selected</td>
+          <td><input readonly="readonly" type="text" name="service" size=40 value="<%= @service %>" /></td>
+        </tr>
+        <% end %>
+        <tr valign=top>
+          <td width="250px">Name</td>
+          <td><input type="text" name="name" size=40 /></td>
+        </tr>
+        <tr valign=top>
+          <td width="250px">Email Id</td>
+          <td><input type="text" name="email" size=40 /></td>
+        </tr>
+        <tr valign=top>
+          <td width="250px">Contact Number/s</td>
+          <td><input type="text" name="phone" size=40 /></td>
+        </tr>
+        <tr valign=top>
+          <td width="250px">Query</td>
+          <td><textarea cols=40 rows=6 name="query"></textarea></td>
+        </tr>
+        <tr>
+          <td align=center colspan=2><input type="submit" value="Submit" /></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>
+
+<div class="post">
+  <h2 class="title" style="padding-top:0;"><a href="#">Contact Person</a></h2>
+  <div class="entry">
+    <p>Mr. K.P.Vyawahare
+    <br />Contact No. 9960578844
+    <br />Email Address: <a href="mailto:admin@surryalife.com">admin@surryalife.com</a></p>
+  </div>
+</div>

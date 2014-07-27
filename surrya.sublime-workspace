@@ -1,0 +1,354 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"first",
+				"first_or_create"
+			],
+			[
+				"sub",
+				"subject"
+			],
+			[
+				"course",
+				"course_titles"
+			],
+			[
+				"title",
+				"title_list"
+			],
+			[
+				"cour",
+				"course_titles"
+			],
+			[
+				"count",
+				"country_name"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/test/fixtures/degrees.yml",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/app/models/degree.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/config/deploy.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/config/database.yml",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/app/models/designation.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/db/migrate/20140721064759_create_course_criteria.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/db/migrate/20140721064648_create_designations.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/db/migrate/20140721064624_create_degrees.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/db/migrate/20120914071257_create_courses.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/db/migrate/20120912231706_create_users.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/app/models/course_rating.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/app/controllers/comments_controller.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/app/controllers/courses_controller.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/app/controllers/users_controller.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/config/routes.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/app/models/subject.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/app/models/provider.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/app/models/course.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/public/subjects.json",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/lib/spam_users.csv",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/db/schema.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/log/production.log",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/public/comingsoon/images/ico/arrow-down-circle-accent.svg",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/test/fixtures/users.yml",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/app/models/user.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/app/models/user_session.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/config/unicorn.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/lib/courses.csv",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/test/fixtures/comments.yml",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/app/models/comment.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/Rakefile",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/app/controllers/ddg_controller.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/deploy.sh",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/lib/coursera.csv",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/config.ru",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/Capfile",
+		"/Users/Pradyumna/codes/spice/coursebuffet/share/spice/coursebuffet/coursebuffet.js",
+		"/Users/Pradyumna/codes/spice/coursebuffet/t/Coursebuffet.t",
+		"/Users/Pradyumna/codes/spice/zeroclickinfo-spice/lib/DDG/Spice/Airlines.pm",
+		"/Users/Pradyumna/codes/spice/coursebuffet/share/spice/coursebuffet/course_titles.txt",
+		"/Users/Pradyumna/codes/spice/coursebuffet/.gitignore",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/app/views/designations/show.html.erb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/app/controllers/degrees_controller.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/app/helpers/designations_helper.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/test/fixtures/designations.yml",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/app/models/degree_course_subject.rb",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/db/migrate/20140314063158_create_degrees.rb",
+		"/Users/Pradyumna/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Pradyumna/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/Pradyumna/Dropbox/CourseBuffet/degree requirments/df new format Mar 11 Bruce modified.csv",
+		"/Users/Pradyumna/codes/design/cblearningpathhtml/desgn.html",
+		"/Users/Pradyumna/Desktop/cb/df.csv",
+		"/Users/Pradyumna/Desktop/cb/__HTML-LP.rar Folder/coursesel.html",
+		"/Users/Pradyumna/Desktop/cb/comingsoon/_LaunchSlideDecks.rar Folder/index.html",
+		"/Users/Pradyumna/Desktop/gympact/locations/cal.rb",
+		"/Users/Pradyumna/Desktop/gympact/locations/geoip.rb",
+		"/Users/Pradyumna/Desktop/gympact/locations/ruby_geoip2.rb",
+		"/Users/Pradyumna/Desktop/gympact/locations/ruby_geoip.rb",
+		"/Users/Pradyumna/Downloads/geoipscriptforrest/pactgeoip.py",
+		"/Users/Pradyumna/Desktop/gympact/locations/input_7.csv",
+		"/Users/Pradyumna/Desktop/gympact/dup-pacts/missed_user_ids.csv",
+		"/Users/Pradyumna/Desktop/gympact/dup-pacts/dp3.csv",
+		"/Users/Pradyumna/Desktop/gympact/dup-pacts/dp2.csv",
+		"/Users/Pradyumna/Desktop/gympact/dup-pacts/dp1.csv",
+		"/Users/Pradyumna/dumps/gp_Dump20130816.sql",
+		"/Users/Pradyumna/Desktop/gympact/duplicate_pacts.csv",
+		"/Users/Pradyumna/codes/rails_apps/course_buffet/public/courses.json"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/Pradyumna/codes/rails_apps/course_buffet"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"js/",
+			"css/",
+			"order_by_subject",
+			"validates :link",
+			"find_or_create_by",
+			"cb_sub_level_display",
+			"$course_titles",
+			"#",
+			",",
+			"94.12.52.76",
+			"row"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\\n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "surrya.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"degreescon",
+				"app/controllers/degrees_controller.rb"
+			],
+			[
+				"design",
+				"app/models/designation.rb"
+			],
+			[
+				"createcoursecri",
+				"db/migrate/20140721064759_create_course_criteria.rb"
+			],
+			[
+				"degree",
+				"app/models/degree.rb"
+			],
+			[
+				"createdesign",
+				"db/migrate/20140721064648_create_designations.rb"
+			],
+			[
+				"createdegree",
+				"db/migrate/20140721064624_create_degrees.rb"
+			],
+			[
+				"course",
+				"app/models/course.rb"
+			],
+			[
+				"subje",
+				"app/models/subject.rb"
+			],
+			[
+				"provi",
+				"app/models/provider.rb"
+			],
+			[
+				"subjec",
+				"app/models/subject.rb"
+			],
+			[
+				"provider",
+				"app/models/provider.rb"
+			],
+			[
+				"datab",
+				"config/database.yml"
+			],
+			[
+				"userscon",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"coursescon",
+				"app/controllers/courses_controller.rb"
+			],
+			[
+				"commentscon",
+				"app/controllers/comments_controller.rb"
+			],
+			[
+				"deplo",
+				"config/deploy.rb"
+			],
+			[
+				"course.rb",
+				"app/models/course.rb"
+			],
+			[
+				"ddgcont",
+				"app/controllers/ddg_controller.rb"
+			],
+			[
+				"course.t",
+				"t/Coursebuffet.t"
+			],
+			[
+				"coursejs",
+				"share/spice/coursebuffet/coursebuffet.js"
+			],
+			[
+				"",
+				"share/spice/coursebuffet/course_titles.txt"
+			],
+			[
+				"designsho",
+				"app/views/designations/show.html.erb"
+			],
+			[
+				"cdegree",
+				"app/controllers/degrees_controller.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

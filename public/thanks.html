@@ -1,0 +1,104 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Surrya Life</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="menu">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="services.jsp">Services</a></li>
+			<li><a href="register.html">Register</a></li>
+			<li><a href="contact.jsp">Contact Us</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="header">
+		<div id="logo">
+			<h1><a href="index.html"><i>life</i></a></h1>
+			<p>RIGHT CONSULTANT FOR YOU!</p>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="page">
+	<div id="page-bgtop">
+	<div id="page-bgbtm">
+		<div id="content">
+			<div class="post">
+				<% String yes = request.getParameter("yes"); %>
+				<% if(yes != null && yes.equals("true")) { %>
+				<h2 class="title">Thank you for <%= request.getParameter("method") %>ing</h2><br />
+				<h2 class="title">We will get in touch with you very soon.</h2>
+				<% } else { %>
+				<h2 class="title">There was some problem with Registration</h2><br />
+				<h2 class="title">Please try again. <a href="register.html">Register</a></h2>
+				<% } %>
+			</div>
+			
+		<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content -->
+		<div id="sidebar">
+			<ul>
+				<li>
+					<div id="search" >
+					<form method="get" action="results.jsp">
+						<div>
+							<input type="text" name="q" id="search-text" value="" />
+							<input type="submit" id="search-submit" value="Search" />
+						</div>
+					</form>
+					</div>
+					<div style="clear: both;">&nbsp;</div>
+				</li>
+				<!--li>
+					<h2>Aliquam tempus</h2>
+					<p>Mauris vitae nisl nec metus placerat perdiet est. Phasellus dapibus semper consectetuer hendrerit.</p>
+				</li-->
+				<li>
+					<h2>Best of Surrya Life</h2>
+					<ul>
+						<li><a href="contact.jsp?service=Buy+Business+leadership+ebook">Business leadership ebook @ 1200 rupees only</a></li>
+						<li><a href="contact.jsp?service=60+ways+to+earn+online">60 ways to earn online ebook @ 900 rupees only</a></li>
+						<li><a href="contact.jsp?service=Business+Winner">Business winner -excellent online training.</a></li>
+						<li><a href="advertising.html">Creative ad making and marketing.</a></li>
+						<!-- li><a href="projects.html">New projects</a></li -->
+						<li><a href="contact.jsp?service=New+Business+Opportunities">New Business Opportunities</a></li>
+						<!-- li><a href="contact.jsp?service=Patent+and+Trademark+registration">Patent and Trademark Registration</a></li -->
+					</ul>
+				</li>
+				<!--li>
+					<h2>Blogroll</h2>
+					<ul>
+						<li><a href="#">Aliquam libero</a></li>
+						<li><a href="#">Consectetuer adipiscing elit</a></li>
+						<li><a href="#">Metus aliquam pellentesque</a></li>
+						<li><a href="#">Suspendisse iaculis mauris</a></li>
+						<li><a href="#">Urnanet non molestie semper</a></li>
+						<li><a href="#">Proin gravida orci porttitor</a></li>
+					</ul>
+				</li-->
+				
+			</ul>
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	</div>
+	</div>
+	<!-- end #page -->
+</div>
+	<div id="footer">
+		<p>Copyright (c) 2008 SurryaLife.com. All rights reserved. Design by <a target=_blank href="http://www.10idiots.com">10idiots.com</a> .</p>
+		<p><a href="terms.html">Read our Legal Notice, Terms and Conditions</a></p>
+	</div>
+	<!-- end #footer -->
+</body>
+</html>
