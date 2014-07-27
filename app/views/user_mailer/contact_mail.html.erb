@@ -1,7 +1,7 @@
 <ul>
   <li><b>Name:</b> <%= @params[:name] %></li>
   <li><b>Service selected:</b> <%= @params[:service] %></li>
-  <li><b>Email address:</b> <%= @params[:email] %></li>
+  <li><b>Email address:</b> <a href="mailto:<%= @params[:email] %>"><%= @params[:email] %></a></li>
   <li><b>Contact number:</b> <%= @params[:phone] %></li>
 </ul>
 <h3>Query:</h3>
