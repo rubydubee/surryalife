@@ -4,6 +4,7 @@
 */
 
 
+
 body {
   margin: 0;
   padding: 0;
@@ -169,7 +170,7 @@ a:hover {
   height: 35px;
   margin-right: 1px;
   padding: 16px 40px 0px 40px;
-  background: url(img04.gif) no-repeat right top;
+  background: url(images/img04.gif) no-repeat right top;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -181,7 +182,7 @@ a:hover {
 }
 
 #menu a:hover, #menu .current_page_item a {
-  background: url(img05.gif) repeat-x left top;
+  background: url(images/img05.gif) repeat-x left top;
   text-decoration: none;
   color: #FFFFFF;
 }
@@ -298,14 +299,14 @@ a:hover {
 
 #sidebar li li {
   line-height: 35px;
-  background: url(img02.gif) repeat-x left bottom;
+  background: url(images/img02.gif) repeat-x left bottom;
   margin: 0px 30px;
   border-left: none;
 }
 
 #sidebar li li a {
   padding-left: 10px;
-  background: url(img01.gif) no-repeat left 6px;
+  background: url(images/img01.gif) no-repeat left 6px;
 }
 
 #sidebar li li span {
@@ -405,3 +406,19 @@ table.service-table {
   height:200px;
   text-align:center;
 }
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
