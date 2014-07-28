@@ -1,5 +1,8 @@
 <div class="post">
   <h2 class="title">Register with us</h2>
+  <% if flash[:error] %>
+  <h3 style="color:red">Error: <%= flash[:error] %></h3>
+  <% end %>
   <div style="clear: both;">&nbsp;</div>
   <div class="entry">
     <p>Please fill all your details and we will get in touch with you soon.</p>
@@ -34,7 +37,7 @@
           <td colspan="2"><%= recaptcha_tags %></td>
         </tr>
         <tr>
-          <td colspan=2><br><input type="checkbox" /> Accept <a href="terms.html">Terms and Conditions</a></td>
+          <td colspan=2><br><input type="checkbox" name="accept_term" /> Accept <a href="terms.html">Terms and Conditions</a></td>
         </tr>
         <tr>
           <td align=center colspan=2><input type="submit" value="Register" /></td>

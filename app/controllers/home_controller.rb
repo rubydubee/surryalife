@@ -40,14 +40,27 @@ class HomeController < ApplicationController
   end
 
   def signup
-    if Rails.env.development? or verify_recaptcha
+    if params[:accept_term].nil?
+      flash[:error] = "Please Accept our Terms and Conditions."
+      redirect_to "/register"
+      return
+    end
+    if params[:name].blank? or params[:phone_number].blank? or params[:email].blank?
+      flash[:error] = "Please enter all the fields marked with *."
+      redirect_to "/register"
+      return
+    end
+    if verify_recaptcha
       UserMailer.register_mail(params).deliver
       @success = true
       @method = "register"
+      render :thanks
+      return
     else
-      @success = false
+      flash[:error] = "Please enter the correct verification code."
+      redirect_to "/register"
+      return
     end
-    render :thanks
   end
 
   def results
