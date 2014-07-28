@@ -3,11 +3,11 @@ class UserMailer < ActionMailer::Base
 
   def contact_mail(params)
     @params = params
-    mail(to: "don.paddy@gmail.com", subject: "Contact request from #{@params[:name]}")
+    mail(to: "admin@surryalife.com", subject: "Contact request from #{@params[:name]}")
   end
 
   def register_mail(params)
     @params = params
-    mail(to: "don.paddy@gmail.com", subject: "New User Registration: #{@params[:name]}")
+    mail(to: "admin@surryalife.com", subject: "New User Registration: #{@params[:name]}")
   end
 end
