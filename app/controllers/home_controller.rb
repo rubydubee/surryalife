@@ -40,26 +40,39 @@ class HomeController < ApplicationController
   end
 
   def signup
-    if params[:accept_term].nil?
-      flash[:error] = "Please Accept our Terms and Conditions."
+    begin
+      puts "signup : started"
+      if params[:accept_term].nil?
+        puts "signup : accept_term"
+        flash[:error] = "Please Accept our Terms and Conditions."
+        redirect_to "/register"
+        return
+      end
+      if params[:name].blank? or params[:phone_number].blank? or params[:email].blank?
+        puts "signup : blank_stuff"
+        flash[:error] = "Please enter all the fields marked with *."
+        redirect_to "/register"
+        return
+      end
+      puts "signup : nothing_blank"
+      if verify_recaptcha
+        puts "signup : verify_recaptcha"
+        UserMailer.register_mail(params).deliver
+        puts "signup : sent_email"
+        @success = true
+        @method = "register"
+        render :thanks
+        return
+      else
+        puts "signup : not_verified"
+        flash[:error] = "Please enter the correct verification code."
+        redirect_to "/register"
+        return
+      end
+    rescue Exception => e
+      puts e.message
+      puts e.backtrace
       redirect_to "/register"
-      return
-    end
-    if params[:name].blank? or params[:phone_number].blank? or params[:email].blank?
-      flash[:error] = "Please enter all the fields marked with *."
-      redirect_to "/register"
-      return
-    end
-    if verify_recaptcha
-      UserMailer.register_mail(params).deliver
-      @success = true
-      @method = "register"
-      render :thanks
-      return
-    else
-      flash[:error] = "Please enter the correct verification code."
-      redirect_to "/register"
-      return
     end
   end
 
